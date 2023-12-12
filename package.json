@@ -4,6 +4,7 @@
   "description": "You will be able to view and manage the departments, roles, and employees the company so that you can organize and plan the business!",
   "main": "index.js",
   "scripts": {
+    "start": "node ./db/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

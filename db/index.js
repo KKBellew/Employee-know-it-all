@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
-const connection = require("./db");
+const mysql = require("mysql");
+const connection = require(".");
 require("consol.table");
 
 //functins for adding, viewing, and updating go here
@@ -63,22 +64,7 @@ function addDepartment() {
     });
 }
 
-// Function to add a role
-function addRole() {
-  // Implement similar to addDepartment
-}
-
-// Function to add an employee
-function addEmployee() {
-  // Implement similar to addDepartment
-}
-
-// Function to update an employee role
-function updateEmployeeRole() {
-  // Implement similar to addDepartment
-}
-
-// Display options using inquirer
+// Display options in terminal
 function mainMenu() {
   inquirer
     .prompt([

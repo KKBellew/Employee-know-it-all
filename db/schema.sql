@@ -1,9 +1,16 @@
---create table for specifics required--
+DROP DATABASE IF EXISTS employees;
+
+CREATE DATABASE employees;
+
+USE employees;
+
+--create table for dept--
 CREATE TABLE department (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL
 );
 
+--create table for role--
 CREATE TABLE role (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
@@ -12,6 +19,7 @@ CREATE TABLE role (
     FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
+--create table for employee--
 CREATE TABLE employee (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
